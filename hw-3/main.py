@@ -1,6 +1,6 @@
 import yaml
 import tensorflow as tf
-from src.arch import run_transformer
+from src.model import run_transformer
 
 print("Check GPU and TF Version")
 print(f"{tf.config.list_physical_devices()=}")

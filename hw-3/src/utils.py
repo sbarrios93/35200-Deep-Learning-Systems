@@ -73,6 +73,7 @@ class TokenManager:
         self.target_data = None
         self.max_length = None
         self.vocab_size = None
+        self.output_lang = None
         
         # Have the tokens been built before?
         self.is_built = False
@@ -112,16 +113,8 @@ class TokenManager:
 
         return sentences, tokenizer_corpus, num_words, sos_token, eos_token, idx_to_remove
 
-    def generate_tokens(self, input_data, target_data, max_length, vocab_size):
-        if (self.is_built == True):
-            print("Model has been built previously")
-            if(self.vocab_size == vocab_size) or (self.vocab_size is not None):
-                print("Vocab Size exists and is the same as previous")
-                if (self.max_length == max_length) or (self.max_length is not None):
-                    print('Max length exists and is the same as previous')
-            print("Token building passed ... everything looks OK")
-            time.sleep(2)
-        else:
+    def generate_tokens(self, input_data, target_data, max_length, vocab_size, output_lang):
+        def tokenize(input_data, target_data, max_length, vocab_size, output_lang):
             print("Wait...Building new tokens...")
             # input tokens
             self.encoder_inputs, self.tokenizer_inputs, self.num_words_inputs, self.sos_token_input, self.eos_token_input, self.del_idx_inputs = self.subword_tokenize(input_data, vocab_size, max_length)
@@ -133,3 +126,28 @@ class TokenManager:
             self.target_data = target_data
             self.vocab_size = vocab_size
             self.max_length = max_length
+            self.output_lang = output_lang
+            print('Tokens Built')
+        
+        # error counter
+        t = 0
+        if self.is_built != True:
+            print("Model has not been built previously")
+            t += 1
+            tokenize(input_data, target_data, max_length, vocab_size, output_lang)
+        if self.output_lang != output_lang:
+            print("Output language is different from the one previously built")
+            tokenize(input_data, target_data, max_length, vocab_size, output_lang)
+        t += 1
+        if self.vocab_size != vocab_size:
+            print("New vocab size does not match vocab size of previous model")
+            tokenize(input_data, target_data, max_length, vocab_size, output_lang)
+            t += 1
+        if self.max_length != max_length:
+            print("New max length does not match max length of previous model")
+            tokenize(input_data, target_data, max_length, vocab_size, output_lang)
+            t += 1
+        
+        if t == 0:
+            print("Token building passed ... everything looks OK")
+            time.sleep(2)

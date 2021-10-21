@@ -1,3 +1,4 @@
 {
-    "jupyter.jupyterServerType": "local"
+    "jupyter.jupyterServerType": "local",
+    "python.interpreterPath": "/root/anaconda3/envs/dl/bin/python"
 }
