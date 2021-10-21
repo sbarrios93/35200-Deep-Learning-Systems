@@ -1,0 +1,141 @@
+MODELS:
+  base:
+    MAX_VOCAB_SIZE : 16384
+    D_MODEL: 512
+    N_LAYERS: 4
+    FFN_UNITS: 512
+    N_HEADS: 8
+    DROPOUT_RATE: 0.1
+    ACTIVATION: relu
+    USE_POSITIONAL: True
+
+  dim-256:
+    MAX_VOCAB_SIZE : 16384
+    D_MODEL: 256
+    N_LAYERS: 4
+    FFN_UNITS: 512
+    N_HEADS: 8
+    DROPOUT_RATE: 0.1
+    ACTIVATION: relu
+    USE_POSITIONAL: True
+
+  dim-1024:
+    MAX_VOCAB_SIZE : 16384
+    D_MODEL: 1024
+    N_LAYERS: 4
+    FFN_UNITS: 512
+    N_HEADS: 8
+    DROPOUT_RATE: 0.1
+    ACTIVATION: relu
+    USE_POSITIONAL: True
+
+  dim-2048:
+    MAX_VOCAB_SIZE : 16384
+    D_MODEL: 2048
+    N_LAYERS: 4
+    FFN_UNITS: 512
+    N_HEADS: 8
+    DROPOUT_RATE: 0.1
+    ACTIVATION: relu
+    USE_POSITIONAL: True
+
+  depth-6:
+    MAX_VOCAB_SIZE : 16384
+    D_MODEL: 512
+    N_LAYERS: 6
+    FFN_UNITS: 512
+    N_HEADS: 8
+    DROPOUT_RATE: 0.1
+    ACTIVATION: relu
+    USE_POSITIONAL: True
+
+  depth-10:
+    MAX_VOCAB_SIZE : 16384
+    D_MODEL: 512
+    N_LAYERS: 10
+    FFN_UNITS: 512
+    N_HEADS: 8
+    DROPOUT_RATE: 0.1
+    ACTIVATION: relu
+    USE_POSITIONAL: True
+
+  depth-16:
+    MAX_VOCAB_SIZE : 16384
+    D_MODEL: 512
+    N_LAYERS: 16
+    FFN_UNITS: 512
+    N_HEADS: 8
+    DROPOUT_RATE: 0.1
+    ACTIVATION: relu
+    USE_POSITIONAL: True
+
+  heads-6:
+    MAX_VOCAB_SIZE : 16384
+    D_MODEL: 512
+    N_LAYERS: 8
+    FFN_UNITS: 512
+    N_HEADS: 6
+    DROPOUT_RATE: 0.1
+    ACTIVATION: relu
+    USE_POSITIONAL: True
+
+  heads-10:
+    MAX_VOCAB_SIZE : 16384
+    D_MODEL: 512
+    N_LAYERS: 8
+    FFN_UNITS: 512
+    N_HEADS: 10
+    DROPOUT_RATE: 0.1
+    ACTIVATION: relu
+    USE_POSITIONAL: True
+
+  heads-16:
+    MAX_VOCAB_SIZE : 16384
+    D_MODEL: 512
+    N_LAYERS: 8
+    FFN_UNITS: 512
+    N_HEADS: 16
+    DROPOUT_RATE: 0.1
+    ACTIVATION: relu
+    USE_POSITIONAL: True
+
+  vocab:
+    MAX_VOCAB_SIZE : 8192
+    D_MODEL: 512
+    N_LAYERS: 4
+    FFN_UNITS: 512
+    N_HEADS: 8
+    DROPOUT_RATE: 0.1
+    ACTIVATION: relu
+    USE_POSITIONAL: True
+  
+  skip-positional:
+    MAX_VOCAB_SIZE : 16384
+    D_MODEL: 512
+    N_LAYERS: 4
+    FFN_UNITS: 512
+    N_HEADS: 8
+    DROPOUT_RATE: 0.1
+    ACTIVATION: relu
+    USE_POSITIONAL: False
+
+  gelu:
+    MAX_VOCAB_SIZE : 16384
+    D_MODEL: 512
+    N_LAYERS: 4
+    FFN_UNITS: 512
+    N_HEADS: 8
+    DROPOUT_RATE: 0.1
+    ACTIVATION: gelu
+    USE_POSITIONAL: True
+  
+  swish:
+    MAX_VOCAB_SIZE : 16384
+    D_MODEL: 512
+    N_LAYERS: 4
+    FFN_UNITS: 512
+    N_HEADS: 8
+    DROPOUT_RATE: 0.1
+    ACTIVATION: swish
+    USE_POSITIONAL: True
+  

@@ -1,0 +1,11 @@
+{
+    "MODEL NAME": "depth-6",
+    "MAX VOCAB SIZE": 16384,
+    "D_MODEL": 512,
+    "N_LAYERS": 6,
+    "FFN_UNITS": 512,
+    "N_HEADS": 8,
+    "DROPOUT_RATE": 0.1,
+    "ACTIVATION": "relu",
+    "USE_POSITIONAL": true
+}

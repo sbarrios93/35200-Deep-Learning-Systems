@@ -1,0 +1,11 @@
+{
+    "MODEL NAME": "dim-1024",
+    "MAX VOCAB SIZE": 16384,
+    "D_MODEL": 1024,
+    "N_LAYERS": 4,
+    "FFN_UNITS": 512,
+    "N_HEADS": 8,
+    "DROPOUT_RATE": 0.1,
+    "ACTIVATION": "relu",
+    "USE_POSITIONAL": true
+}
