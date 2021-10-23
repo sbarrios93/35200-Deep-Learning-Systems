@@ -1,0 +1,14 @@
+{
+    "MODEL NAME": "mvp",
+    "MAX VOCAB SIZE": 16384,
+    "D_MODEL": 512,
+    "N_LAYERS": 6,
+    "FFN_UNITS": 2048,
+    "N_HEADS": 8,
+    "DROPOUT_RATE": 0.1,
+    "ACTIVATION": "gelu",
+    "USE_POSITIONAL": true,
+    "MAX_LENGTH": 24,
+    "NUM_SAMPLES": 120000,
+    "EPOCHS": 40
+}

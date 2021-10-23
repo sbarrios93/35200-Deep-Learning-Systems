@@ -1,0 +1,14 @@
+{
+    "MODEL NAME": "heads-16",
+    "MAX VOCAB SIZE": 16384,
+    "D_MODEL": 512,
+    "N_LAYERS": 4,
+    "FFN_UNITS": 512,
+    "N_HEADS": 16,
+    "DROPOUT_RATE": 0.1,
+    "ACTIVATION": "relu",
+    "USE_POSITIONAL": true,
+    "MAX_LENGTH": 15,
+    "NUM_SAMPLES": 80000,
+    "EPOCHS": 10
+}
